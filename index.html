@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson Cat</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background-image: url('/ui/index/bg_cream.jpeg');
+margin: 0px;
+color: #613f3f;
+overflow-x: hidden;
+}
+
+#topborder{
+background-image: url('/ui/topborder_cream.png');
+background-repeat: repeat-x;
+height: 73px;
+width: 100vw;
+position: fixed;
+top: 0px;
+z-index: 3;
+}
+
+#bottomborder{
+background-image: url('/ui/bottomborder_cream.png');
+background-repeat: repeat-x;
+height: 73px;
+width: 100vw;
+position: fixed;
+bottom: 0px;
+z-index: 3;
+}
+
+#all{
+background-color: #aaa;
+width: 800px;
+margin: 0 auto;
+}
+
+#side{
+width: 175px;
+margin-top: 135px;
+float: left;
+position: fixed;
+}
+
+#profile{
+background-color: #fefefe;
+border-radius: 10px;
+width: 145px;
+margin-bottom: 25px;
+padding: 15px;
+}
+
+#pfp{
+background-image: url('/photos/pfp.jpg');
+width: 145px;
+height: 145px;
+border-radius: 10px;
+opacity: 0.9;
+}
+
+#profiletext{
+margin: 0px;
+letter-spacing: 1px;
+text-align: left;
+font-size: 14px;
+padding: 15px 5px 0px 5px;
+color: #856d6d;
+}
+
+#nav{
+background-color: #fefefe;
+width: 175px;
+border-radius: 10px;
+position: relative;
+}
+
+#navheader{
+border-bottom: 3px solid #cdb5b5;
+margin: 0px;
+line-height: 10px;
+padding-left: 5px;
+padding-top: 15px;
+font-family: 'Sacramento', cursive;
+color: #578EA3;
+}
+
+#navbow{
+background-image: url('/ui/index/navbow_cream.png');
+background-size: 100%;
+background-repeat: no-repeat;
+width: 65px;
+height: 41px;
+position: absolute;
+right: 9px;
+top: 14px;
+z-index: 2;
+}
+
+ul{
+margin: 0px;
+padding: 13px 10px 10px 16px;
+}
+
+li{
+list-style-type: none;
+margin: -10px;
+letter-spacing: -1px;
+font-size: 18px;
+}
+
+#main{
+width: 605px;
+float: right;
+position: relative;
+}
+
+#title{
+font-family: 'Sacramento', Cursive;
+border-bottom: 3px solid #cdb5b5;
+line-height: 15px;
+width: 600px;
+margin: 0px;
+color: #578EA3;
+background-color: #fefefe;
+position: absolute;
+top: 74px;
+border-radius: 10px 10px 0px 0px;
+padding-left: 5px;
+padding-top: 22px;
+}
+
+#bow{
+background-image: url('/ui/index/bow_cream.png');
+background-size: 100%;
+background-repeat: no-repeat;
+width: 160px;
+height: 102px;
+position: absolute;
+right: 45px;
+top: 81px;
+z-index: 2;
+}
+
+#content{
+background-color: #fefefe;
+position: relative;
+top: 114px;
+width: 575px;
+padding: 15px 15px 73px 15px;
+}
+
+.entry{
+width: 575px;
+}
+
+.entryhead{
+width: 575px;
+height: 80px;
+position: relative;
+border-bottom: 1px dotted #613f3f;
+padding-bottom: 5px;
+}
+
+.icon{
+width: 80px;
+opacity: 0.9;
+}
+
+.date{
+position: absolute;
+bottom: 0;
+left: 85px;
+padding-bottom: 5px;
+}
+
+.date p{
+margin: 0px;
+letter-spacing: -1px;
+color: #856d6d;
+}
+
+.datecolor{
+color: #578EA3;
+}
+
+.header{
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.header h2{
+margin: 0px;
+font-family: 'Sacramento', cursive;
+line-height: 23px;
+font-size: 26px;
+color: #578EA3;
+}
+
+.text{
+text-align: justify;
+margin-top: 5px;
+letter-spacing: 1px;
+color: #856d6d;
+}
+
+a{
+text-decoration: none;
+color: #613f3f;
+}
+
+a:visited{
+color: #613f3f;
+}
+
+a:hover{
+font-style: italic;
+}
+
+a:active{
+font-style: italic;
+font-weight: bold;
+}
+
+::-webkit-scrollbar{
+width: 6px; 
+}
+    
+::-webkit-scrollbar-track{
+background-color: #578EA3;
+}
+
+::-webkit-scrollbar-thumb{
+background-color: #cdb5b5;
+}
+
+#credit{
+font-size: 12px;
+position: fixed;
+bottom: 70px;
+right: 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="topborder"></div>
+<div id="bottomborder"></div>
+
+<div id="all">
+
+<div id="side">
+
+<div id="profile">
+<div id="pfp"></div> <!-- see "#pfp" in CSS, 145x145px -->
+<p id="profiletext">Hi, Elle here! Welcome to Crimson Cat's Translations! <br>I'll be focusing on translations related to the PC98 and light novels.</p>
+</div>
+
+<div id="nav">
+<h2 id="navheader">Projects</h2>
+
+<ul>
+<br>
+<li>♡ <a href="/doki_doki_vacation/ddv.html" target="_blank">Doki Doki Vacation ~Kirameku Kisetsu no Naka de~</a></li>
+<br>
+<li>♡ <a href="/jinrui_wa_suitai_shimashita/jintai.html" target="_blank">Jinrui wa Suitai Shimashita</a></li>
+<br>
+<li>♡ <a href="jedai.html" target="_blank">JEDAI Manual</a></li>
+<br>
+</ul>
+</div>
+
+</div>
+
+<div id="main">
+
+<div id="bow"></div>
+
+<h1 id="title">Crimson Cat's Translations</h1>
+
+<div id="content">
+
+<!-- ENTRY START -->
+
+<div class="entry">
+
+<div class="entryhead">
+<div class="icon">
+<img src="/photos/happy.jpg" width="80px">
+</div>
+<div class="date">
+<p><span class="datecolor"><b>Date:</b></span> 09/19/2025</p>
+<p><span class="datecolor"><b>Mood:</b></span> Happy</p>
+</div>
+<div class="header">
+<h2>Jintai Chapter 7</h2>
+</div>
+</div>
+
+<div class="text">
+<p style="margin:0px;">The 7th chapter for Jinrui wa Suitai Shimashita Heijou Unten, The Fairies' Secret Tool 2, is now completed!</p>
+<br>
+<ul><li>♡ <a href="/jinrui_wa_suitai_shimashita/jintai_hu_ch7.html" target="_blank">Read the chapter here!</a></li></ul>
+<ul><li>♡ <a href="https://www.baka-tsuki.org/project/index.php?title=Heijou_Unten_Chapter_7" target="_blank">Read the chapter on Baka-Tsuki!</a></li></ul>
+<br>
+<br>
+<br>
+</div>
+
+</div>
+
+<!-- ENTRY END -->
+
+
+<!-- ENTRY START -->
+
+<div class="entry">
+
+<div class="entryhead">
+<div class="icon">
+<img src="/photos/focused.jpg" width="80px">
+</div>
+<div class="date">
+<p><span class="datecolor"><b>Date:</b></span> 09/11/2025</p>
+<p><span class="datecolor"><b>Mood:</b></span> Focused (˘‿˘)</p>
+</div>
+<div class="header">
+<h2>Jintai Chapter 6</h2>
+</div>
+</div>
+
+<div class="text">
+<p style="margin:0px;">The 6th chapter for Jinrui wa Suitai Shimashita Heijou Unten, The Fairies' Secret Tool 1, is now completed!</p>
+<br>
+<ul><li>♡ <a href="/jinrui_wa_suitai_shimashita/jintai_hu_ch6.html" target="_blank">Read the chapter here!</a></li></ul>
+<ul><li>♡ <a href="https://www.baka-tsuki.org/project/index.php?title=Heijou_Unten_Chapter_6" target="_blank">Read the chapter on Baka-Tsuki!</a></li></ul>
+<br>
+<br>
+<br>
+</div>
+
+</div>
+
+<!-- ENTRY END -->
+
+
+
+<!-- ENTRY START -->
+
+<div class="entry">
+
+<div class="entryhead">
+<div class="icon">
+<img src="/photos/unbothered.jpg" width="80px">
+</div>
+<div class="date">
+<p><span class="datecolor"><b>Date:</b></span> 09/12/2023</p>
+<p><span class="datecolor"><b>Mood:</b></span> Over-It</p>
+</div>
+<div class="header">
+<h2>Doki Doki Vacation</h2>
+</div>
+</div>
+
+<div class="text">
+<p style="margin:0px;">Doki Doki Vacation has been having issues concerning memory, which makes it crash. No solution yet, but this file works for now.</p>
+<br>
+<ul><li>♡ <a href="/doki_doki_vacation/translated/PC98DokiDokiTrans120923.hdi">Download the translated file here!</a></li></ul>
+<ul><li>♡ <a href="/doki_doki_vacation/【PC98】ＤｏｋｉＤｏｋｉバケーション.hdi">Download the original game file here!</a></li></ul>
+<br>
+<br>
+<br>
+</div>
+
+</div>
+
+<!-- ENTRY END -->
+
+
+<!-- ENTRY START -->
+
+<div class="entry">
+
+<div class="entryhead">
+<div class="icon">
+<img src="/photos/hmmm.jpg" width="80px">
+</div>
+<div class="date">
+<p><span class="datecolor"><b>Date:</b></span> 01/26/2022</p>
+<p><span class="datecolor"><b>Mood:</b></span> Contemplative</p>
+</div>
+<div class="header">
+<h2>Jintai Chapter 1</h2>
+</div>
+</div>
+
+<div class="text">
+<p style="margin:0px;">The 1st chapter for Jinrui wa Suitai Shimashita Heijou Unten, The Working Fairies' Business Venture, is now edited and completed!</p>
+<br>
+<ul><li>♡ <a href="/jinrui_wa_suitai_shimashita/jintai_hu_ch1.html" target="_blank">Read the chapter here!</a></li></ul>
+<ul><li>♡ <a href="https://www.baka-tsuki.org/project/index.php?title=Heijou_Unten_Chapter_1" target="_blank">Read the chapter on Baka-Tsuki!</a></li></ul>
+<br>
+<br>
+<br>
+</div>
+
+</div>
+
+<!-- ENTRY END -->
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
+
+</body>
+
+</html>
