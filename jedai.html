@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson Cat</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background-image: url('/ui/jedai/bg_blue.png');
+margin: 0px;
+color: #613f3f;
+overflow-x: hidden;
+}
+
+#topborder{
+background-image: url('/ui/topborder_cream.png');
+background-repeat: repeat-x;
+height: 73px;
+width: 100vw;
+position: fixed;
+top: 0px;
+z-index: 3;
+}
+
+#bottomborder{
+background-image: url('/ui/bottomborder_cream.png');
+background-repeat: repeat-x;
+height: 73px;
+width: 100vw;
+position: fixed;
+bottom: 0px;
+z-index: 3;
+}
+
+#all{
+background-color: #fefefe00;
+width: 875px;
+margin: 0 auto;
+}
+
+#side{
+width: 175px;
+margin-top: 135px;
+float: left;
+position: fixed;
+}
+
+#profile{
+background-color: #fefefe;
+border-radius: 10px;
+width: 145px;
+margin-bottom: 25px;
+padding: 15px;
+}
+
+#pfp{
+background-image: url('/photos/pfp_resize.jpg');
+width: 145px;
+height: 145px;
+border-radius: 10px;
+opacity: 0.9;
+}
+
+#profiletext{
+margin: 0px;
+letter-spacing: 1px;
+text-align: left;
+font-size: 14px;
+padding: 15px 5px 0px 5px;
+color: #856d6d;
+}
+
+#nav{
+background-color: #fefefe;
+width: 175px;
+border-radius: 10px;
+position: relative;
+}
+
+#navheader{
+border-bottom: 3px solid #cdb5b5;
+margin: 0px;
+line-height: 10px;
+padding-left: 5px;
+padding-top: 15px;
+font-family: 'Sacramento', cursive;
+color: #578EA3;
+}
+
+#navbow{
+background-image: url('/ui/jedai/navbow_blue.png');
+background-size: 100%;
+background-repeat: no-repeat;
+width: 65px;
+height: 41px;
+position: absolute;
+right: 9px;
+top: 14px;
+z-index: 2;
+}
+
+ul{
+margin: 0px;
+padding: 13px 10px 10px 16px;
+}
+
+li{
+list-style-type: none;
+margin: -10px;
+letter-spacing: -1px;
+font-size: 18px;
+}
+
+#main{
+/*width: 605px;
+float: right;*/
+width: 925px;       /* enough to fit your 875px content + padding */
+margin: 0 auto;     /* centers the main block */
+position: relative;
+}
+
+#title{
+font-family: 'Sacramento', Cursive;
+border-bottom: 7px solid #cdb5b5;
+line-height: 15px;
+width: 875px;
+margin: 0 auto;
+height: 300px;
+margin: 0 auto;
+color: #578EA3;
+background-color: #fefefe;
+position: absolute;
+top: 94px;
+border-radius: 10px 10px 0px 0px;
+padding-left: 25px;
+padding-right: 25px;
+padding-top: 22px;
+font-size: 50px;
+text-align: center;
+}
+
+#bow{
+background-image: url('/ui/jedai/bow_blue.png');
+background-size: 100%;
+background-repeat: no-repeat;
+width: 160px;
+height: 102px;
+position: absolute;
+right: 45px;
+top: 81px;
+z-index: 2;
+}
+
+#content{
+background-color: #fefefe;
+position: relative;
+margin: 0 auto;
+top: 194px;
+width: 875px;
+padding: 15px 25px 73px 25px;
+}
+
+.entry{
+width: 875px;
+}
+
+.entryhead{
+width: 875px;
+height: 80px;
+position: relative;
+border-bottom: 1px dotted #613f3f;
+padding-bottom: 5px;
+}
+
+.icon{
+width: 80px;
+opacity: 0.9;
+}
+
+.date{
+position: absolute;
+bottom: 0;
+left: 85px;
+padding-bottom: 5px;
+}
+
+.date p{
+margin: 0px;
+letter-spacing: -1px;
+color: #856d6d;
+}
+
+.datecolor{
+color: #578EA3;
+}
+
+.header{
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.header h2{
+margin: 0px;
+font-family: 'Sacramento', cursive;
+line-height: 23px;
+font-size: 26px;
+color: #578EA3;
+}
+
+.text{
+text-align: justify;
+margin-top: 5px;
+letter-spacing: 2px;
+line-height: 25px;
+color: #856d6d;
+}
+
+a{
+text-decoration: none;
+color: #613f3f;
+}
+
+a:visited{
+color: #613f3f;
+}
+
+a:hover{
+font-style: italic;
+}
+
+a:active{
+font-style: italic;
+font-weight: bold;
+}
+
+::-webkit-scrollbar{
+width: 6px; 
+}
+    
+::-webkit-scrollbar-track{
+background-color: #578EA3;
+}
+
+::-webkit-scrollbar-thumb{
+background-color: #cdb5b5;
+}
+
+#credit{
+font-size: 12px;
+position: fixed;
+bottom: 70px;
+right: 0;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div id="all">
+
+<div id="side">
+
+</div>
+
+<div id="main">
+
+<h1 id="title">Jedai Instruction Manual</h1>
+
+<div id="content">
+
+<!-- ENTRY START -->
+
+<div class="entry">
+<div id="top"></div>
+<div class="text">
+<h1 id="-jedai-instruction-manual-"></h1>
+<p>There's no manual online for this program aside from the official one that only provides sample art that would have most likely come with the program (linked <a href="https://www.gamingalexandria.com/pc98/JEDAI/JEDAI%20-%20Manual.pdf">here</a>), so here's one made entirely from scratch and in excruciating detail.</p>
+<p>This manual assumes that the user already has a copy of Jedai, though if not, a copy exists in the archives, linked <a href="https://archive.org/details/NeoKobe-NecPc-98012017-11-17">here</a>.</p>
+<p><em>This manual was created by</em> <strong>LCat4Ever</strong> <em>on Twitter, or</em> <strong>xx_crimsoncat_xx</strong> <em>on Discord.</em></p>
+<br>
+<h1 id="controls">Controls</h1>
+
+<p>Left-Click Mouse/Drawing Pen: Can be used to click the buttons and draw in the program (the drawing pen may lag slightly).  </p>
+<p>F12: Allows for the mouse to move within the program and outside of it once F12 is pressed again.  </p>
+<p>Right-Click Mouse: Can be used to return to the previous menu or exit out of the current menu (similar to using the Backspace button or ESC button).  </p>
+<p>However, when in the drawing area, the right-click brings up the paint options menu.  </p>
+
+<p>*Warning: Control+Z does not work with the program, so there's no way to reverse mistakes. The best option is to save frequently and load in the previous save every time.</p>
+<br>
+<h1 id="how-to-open">How to Open</h1>
+
+<p>Have a PC-98 emulator installed that can load .hdi files, like NekoProject21 or T98-Next.  </p>
+<p style="margin-left: 50px;">Since Jedai runs on the PC-9821, NekoProject21 will need to be used.  </p>
+<p style="margin-left: 50px;">Anex86 doesn't support PC-9821, so that cannot be used.  </p>
+<p style="margin-left: 50px;">This will solve the “256 Colors” error as well.  </p>
+
+<p>If NekoProject21 is being used, go to the “Harddisk” tab at the top and load the Jedai.hdi file.  </p>
+<p style="margin-left: 50px;">Then reset the program by going to the “Emulate” tab and clicking on “Reset”.  </p>
+
+<p>If T98-Next is being used, look for the “HD DRIVE” under the “Disk” tab in the “Main” menu and click in the gray box area to the right of the red rectangle to load in the Jedai.hdi file.  </p>
+<p style="margin-left: 50px;">Click the power button in the top left corner in order to start the program.  </p>
+
+<p>The program should load correctly.</p>
+<br>
+<h1 id="layout">Layout</h1>
+
+<p>The screen that pops up when first opened is black with many tabs at the top, which will be discussed in great detail in order to provide an idea as to which button does what.</p>
+
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<h2 id="floppy-disk-icon">Floppy Disk Icon</h2>
+
+<p>This is what first pops up when clicking on the floppy disk icon to the left of the program, and to the right of the “JEDAI” text.  </p>
+<img src="/photos/jedai/Jedai_2.png" style="width:330px;height:130px;">
+
+<h3 id="first-icon">First Icon</h3>
+
+<p>Going from left to right, the first icon with the floppy disk on it, when clicked on, will produce a second pop-up menu with different image file types, such as “CMP” (JPEG Bitmap), “BMP” (Bitmap), “MAG” (<a href="http://www.paradisearmy.com/doujin/pasok4u.htm">MAKIchan Graphic loader</a>; Can also be found in the PC-98 art program, Multi-Paint System) , and “TIFF” (Tag Image File Format).  </p>
+<img src="/photos/jedai/Jedai_3.png" style="width:430px;height:200px;">
+  <p>This button allows for the user to load an image that has one of these formats from inside the Jedai program itself. The image has to be one that is 8-bit/supports only up to 256 colors. If you load in an image that isn't 8-bit, then a box will pop up saying “無効なファイルです”, which means that the file is invalid.  </p>
+<p>The size of the image doesn't matter, though the sizes listed under the “Second Icon” header are preferable since it's possible for the image to not show up properly in the program.  </p>
+
+<p>After clicking one of the buttons as seen below, a directory will pop up and allow for the user to load an image with the corresponding format (which, in this case, is a .BMP file).  </p>
+<p>An image can only be loaded if it is added to the Jedai.hdi file itself beforehand, which can be done by opening Jedai in DiskExplorer and importing the image.  </p>
+<p>If the user decides against loading an image, simply right-click to return.  </p>
+
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+<h3 id="second-icon">Second Icon</h3>
+
+<p>The second icon will produce a larger menu consisting of the previously mentioned image formats, as well as the options for 256 colors (8-bit) and 16 colors (4-bit); and the image sizes of 640×400, 640×480, 640x800, and MANU.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<p>This button allows for the user to save their drawing in one of these image formats, as well as being able to choose whether to save the image with 256 colors or 16 colors.  </p>
+<p>The bottom row decides the size of the image. The first three are pretty self-explanatory, though the fourth button probably means “Manual”, which allows for the user to box select a certain part of the image to save, so the size can be however large the selection is.  </p>
+<p>The same directory will pop up once the user clicks a specific image format, though they will be able to name the image file this time. There is a 12-character limit and spaces are not allowed.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+<h3 id="third-icon">Third Icon</h3>
+
+<p>The third icon with the scissor in front of a document, when clicked, will produce the directory menu immediately, and all of the files in Jedai will be visible, not just the images.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<p><strong>BE CAREFUL!</strong> This icon allows for the user to delete any files within Jedai. This can be useful when getting rid of images that the user won't need anymore, but be careful not to misclick or else one of the major components of running Jedai might be deleted instead.  </p>
+<p>The user can select one or multiple files to delete, which will prompt this dialog box, as seen below. The Japanese next to the image file says “を削除します”, which essentially means that the program is asking if the user wishes to delete the file. The user can choose whether to delete one file at a time, all at once, or to cancel the process.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+
+<h3 id="fourth-icon">Fourth Icon</h3>
+
+<p>The fourth icon with the floppy disk and the document sticking out the top of it will produce a menu that has “DRIVE” on it, as well as arrow keys that can switch between different drives, which will be B and C (the user should already be using Drive A).  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<p>When the user hits okay after choosing a drive, they will be prompted with the following text: “DRIVE B: に初期化するディスクをセットして下さい.” This roughly translates to: “Set the disk to be initialized in DRIVE B,” meaning that the main drive that the user will save their images to and load their images from will change to a different drive.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<p>This really isn't as necessary nowadays since this program will most likely be loaded in an emulator as opposed to an actual PC-9821, but it's still good to know.</p>
+
+
+
+<h3 id="fifth-icon">Fifth Icon</h3>
+
+<p>The fifth icon with two floppy disks and an arrow pointing to one of them will produce the menu below, which shows two drives and an arrow pointing from one drive to another.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<p>This prompt will pop up after hitting the OK button: “DRIVE B: に転送元 DRIVE C: に転送先 のディスクをセットして下さい.” This essentially asks the user if they want to transfer the contents from Drive B to Drive C.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+
+<h3 id="sixth-icon">Sixth Icon</h3>
+
+<p>The sixth and final icon in this menu with the “ON OFF” text on it is a bit dubious since the most that happens upon clicking on it is that it either turns on or off.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<p>It's possible that this affected the PC-9821 itself, though there's no way to prove this without owning one.  </p>
+<p>Otherwise, this icon does not do much, so there's no need to really worry about it.</p>
+
+
+
+<h2 id="paint-palette-icon">Paint Palette Icon</h2>
+
+<p>The icon to the right of the floppy disk icon will produce a menu that includes an array of colors at the top that can be clicked on and changed through the arrow keys on the side; gradient and dithering options; the current color (along with the current color's associated number); checkerboard patterned colors underneath that will draw alternating colors for each pixel; and a selection of icons at the bottom.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+
+<h3 id="first-row">First Row</h3>
+
+<p>Starting at the top, the array of colors can be clicked on and the color will be chosen and reflected in the box in the row under it, as seen below.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+<p>The arrow keys can sort through 16 different provided color palettes, starting from 0 and going to 15. These palettes consist of all the colors that can be chosen in the program, though the user can choose colors from different palettes to draw with.  </p>
+<p>Here are some of the different palettes, as examples:  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+
+<h3 id="second-row">Second Row</h3>
+
+<p>The second row consists of the gradient option, the dithering option, and the current color and code (which can't be clicked).  </p>
+<p>The gradient option, when selected, will allow for the user to use a gradient in their art (choosing colors will be described under the “Fourth Row”).  </p>
+<p>It will then force the user to box select any area in the program and load in the gradient top-down, which will show up as shown below.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+<p>The dithering option, when selected, will do the same as the gradient option and make the user box select an area to dither (choosing colors will be described under the “Fourth Row”, though the provided colors are black and white).  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+
+<h3 id="third-row">Third Row</h3>
+
+<p>The third row simply consists of different checkerboard patterns that the user can choose from and draw with.  </p>
+<p>It will draw the same as if the user chose a normal color, except for the alternating colors every pixel.</p>
+
+
+
+<h3 id="fourth-row">Fourth Row</h3>
+
+<p>The fourth row involves five different icons as seen below.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+<p>The first icon on the left with the paint tube will bring up a huge menu with many different things that can be done.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<p>The first thing that stands out is the large selection of colors in a 16x16 table (i.e., 256 colors), which makes it a lot easier for the user to choose colors.  </p>
+<p>However, the user does not have to <em>only</em> choose colors from the given table–they can add their own!  </p>
+<p>This is where the RGB and HSV area comes into play. Anyone who has made art or used Photoshop has seen these before, but just in case, RGB is Red, Green, Blue, and HSV is Hue, Saturation, and Value.  </p>
+<p>RGB and HSV can be adjusted to create a new color and replace the color that is currently selected, as seen below when changing the selected color to a new, random color.  </p>
+<p>This can be done by dragging the left mouse button across the white area in between the arrows, or just clicking the arrows.  </p>
+<p>The new color created is also reflected in the color box and has a number associated with it, like seen below.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+<p>Avoid changing the black color in the top left corner to another color or else it might change the program color as well.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+<p>The bottom row has a few different icons, like what's shown below.<br><img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+<p>The first two icons affect the rainbow-y colored boxes, and the other two similar icons to the right affect the black and white dithered boxes.  </p>
+<p>The first icon with the finger pointing down changes the cursor to a box-select cursor, and a box saying “START” will pop up on the right side (and the word will change to “END” once a second color is clicked).  </p>
+<p>This allows for the user to choose two colors from the 256 colors that will essentially create a gradient, which is reflected in the rainbow-y boxes, as seen below.  </p>
+<p>The icon with the arrow forming a circle just allows for the user to rotate the gradient.  </p>
+
+
+<p>The second set of icons function the exact same way, except now a dithering pattern is created between the two colors (the dithering pattern can also be rotated).  </p>
+<p><p>The colors that are chosen for the gradient and dithering pattern will be shown once exiting out of this menu.</p>
+
+<p><p>The row of icons on the right side of the box of colors also have a variety of functions, as seen below.</p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+<p><p>The top left icon with the arrow pointing to the right allows for the user to click a color and choose another color at the end to create a gradient of colors in the table that are reflective of the colors that were chosen.  </p>
+
+<p><p>The top right icon with the three boxes allows the user to select multiple colors in the table with the left mouse button, and after clicking the right mouse button, a table pops up that allows for the user to adjust the Brightness (top icon), the Saturation (middle icon), and the Hue (bottom icon) of the chosen colors and view the changes in real-time, as seen below.</p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+<p><p>The second row, left icon with three arrows pointing up and a checkerboard-pattern prompts the user to click colors, which are then moved to the bottom right corner and are stacked on top of one another after every color that is clicked. It seems to essentially be a way to sort colors manually.  </p>
+
+<p><p>The second row, right icon with a 3x3 board and arrows has five different functions to choose from, as seen below.</p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+<p>The first icon to the very left allows for the user to see what colors are currently being used in the art piece. The colors that aren't being used are crossed out with a white line. Left clicking will get rid of the crossed out colors.  </p>
+<p>The second icon with the lamp automatically sorts the colors in the table based on their Brightness. A box will pop up once the colors are sorted asking if the user wants to keep the changes or not.  </p>
+<p>The third icon with the person functions similarly to the Brightness icon, except it sorts the colors in the table by how Saturated they are. A box will pop up once the colors are sorted asking if the user wants to keep the changes or not.  </p>
+<p>The fourth icon with three erasers on it sorts the colors based on how much they're being used in the art piece–the colors at the top left of the table are used the most, and the colors at the bottom right are either used the least or not used at all. A box will pop up once the colors are sorted asking if the user wants to keep the changes or not.  </p>
+<p>The fifth icon with the basket of paint tubes sorts the colors in the table by which ones are being used or not, going from left to right. A box will pop up once the colors are sorted asking if the user wants to keep the changes or not.  </p>
+
+
+<p>The third row, left icon with arrows pointing everywhere affects the shape of the gradient and dithering pattern by allowing for the user to choose whether the shape should just go in one direction, spread out in a square shape, or spread out in a radial/circular shape respectively, as seen below.  </p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+
+<p>The third row, right icon with “ON OFF”'s function has been mentioned before, but it's not quite known what this function does, so it's possible it affects the PC-9821 itself.  </p>
+<p>The bottom left icon with the two palettes, when clicked, prompts the user to click one of the colors in the table. Once one of the colors is clicked, the user will have the option to start from the color chosen and select a group of colors and copy the selection to a different area of the table.  </p>
+<p>If the user does not want to perform this function, just right click and it won't do anything.  </p>
+
+
+<p>The bottom right icon with a computer allows for the user to change the Base color of the art piece (essentially, the background); the Line color of the art; and the color of the “ON OFF” button.  </p>
+<p><p>The second icon with a paint tube and checkered pattern to the bottom left of it brings up a menu that allows for the user to create patterns, or use premade ones, as seen below.</p>
+<img src="/photos/jedai/Jedai_1.png" style="width:800px;height:300px;">
+
+<p>The user can choose from a checkerboard pattern in the top row if they want to.  </p>
+<p>The second table has pre-made patterns that are reflected in the bottom left box when clicked on, which can be edited if the user draws in it.  </p>
+<p></p>
+
+
+
+
+<br>
+<br>
+<p style="margin:0px; text-align: center;">❤</p>
+<br>
+<br>
+<li>♡ <a href="/index.html">Back to the Home Page</a></li>
+
+
+</div>
+
+</div>
+
+<!-- ENTRY END -->
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
+
+</body>
+
+</html>

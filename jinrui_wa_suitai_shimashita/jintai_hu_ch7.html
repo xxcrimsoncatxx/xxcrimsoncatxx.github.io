@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crimson Cat</title>
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+background-image: url('/ui/jintai/bg_green.png');
+margin: 0px;
+color: #613f3f;
+overflow-x: hidden;
+}
+
+#topborder{
+background-image: url('/ui/topborder_cream.png');
+background-repeat: repeat-x;
+height: 73px;
+width: 100vw;
+position: fixed;
+top: 0px;
+z-index: 3;
+}
+
+#bottomborder{
+background-image: url('/ui/bottomborder_cream.png');
+background-repeat: repeat-x;
+height: 73px;
+width: 100vw;
+position: fixed;
+bottom: 0px;
+z-index: 3;
+}
+
+#all{
+background-color: #fefefe00;
+width: 875px;
+margin: 0 auto;
+}
+
+#side{
+width: 175px;
+margin-top: 135px;
+float: left;
+position: fixed;
+}
+
+#profile{
+background-color: #fefefe;
+border-radius: 10px;
+width: 145px;
+margin-bottom: 25px;
+padding: 15px;
+}
+
+#pfp{
+background-image: url('/photos/pfp_resize.jpg');
+width: 145px;
+height: 145px;
+border-radius: 10px;
+opacity: 0.9;
+}
+
+#profiletext{
+margin: 0px;
+letter-spacing: 1px;
+text-align: left;
+font-size: 14px;
+padding: 15px 5px 0px 5px;
+color: #856d6d;
+}
+
+#nav{
+background-color: #fefefe;
+width: 175px;
+border-radius: 10px;
+position: relative;
+}
+
+#navheader{
+border-bottom: 3px solid #cdb5b5;
+margin: 0px;
+line-height: 10px;
+padding-left: 5px;
+padding-top: 15px;
+font-family: 'Sacramento', cursive;
+color: #578EA3;
+}
+
+#navbow{
+background-image: url('/ui/jintai/navbow_green.png');
+background-size: 100%;
+background-repeat: no-repeat;
+width: 65px;
+height: 41px;
+position: absolute;
+right: 9px;
+top: 14px;
+z-index: 2;
+}
+
+ul{
+margin: 0px;
+padding: 13px 10px 10px 16px;
+}
+
+li{
+list-style-type: none;
+margin: -10px;
+letter-spacing: -1px;
+font-size: 18px;
+}
+
+#main{
+/*width: 605px;
+float: right;*/
+width: 925px;       /* enough to fit your 875px content + padding */
+margin: 0 auto;     /* centers the main block */
+position: relative;
+}
+
+#title{
+font-family: 'Sacramento', Cursive;
+border-bottom: 7px solid #cdb5b5;
+line-height: 15px;
+width: 875px;
+margin: 0 auto;
+height: 300px;
+margin: 0 auto;
+color: #578EA3;
+background-color: #fefefe;
+position: absolute;
+top: 94px;
+border-radius: 10px 10px 0px 0px;
+padding-left: 25px;
+padding-right: 25px;
+padding-top: 22px;
+font-size: 40px;
+text-align: center;
+}
+
+#bow{
+background-image: url('/ui/index/bow_green.png');
+background-size: 100%;
+background-repeat: no-repeat;
+width: 160px;
+height: 102px;
+position: absolute;
+right: 45px;
+top: 81px;
+z-index: 2;
+}
+
+#content{
+background-color: #fefefe;
+position: relative;
+margin: 0 auto;
+top: 194px;
+width: 875px;
+padding: 15px 25px 73px 25px;
+}
+
+.entry{
+width: 875px;
+}
+
+.entryhead{
+width: 875px;
+height: 80px;
+position: relative;
+border-bottom: 1px dotted #613f3f;
+padding-bottom: 5px;
+}
+
+.icon{
+width: 80px;
+opacity: 0.9;
+}
+
+.date{
+position: absolute;
+bottom: 0;
+left: 85px;
+padding-bottom: 5px;
+}
+
+.date p{
+margin: 0px;
+letter-spacing: -1px;
+color: #856d6d;
+}
+
+.datecolor{
+color: #578EA3;
+}
+
+.header{
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.header h2{
+margin: 0px;
+font-family: 'Sacramento', cursive;
+line-height: 23px;
+font-size: 26px;
+color: #578EA3;
+}
+
+.text{
+text-align: justify;
+margin-top: 5px;
+letter-spacing: 2px;
+line-height: 25px;
+color: #856d6d;
+}
+
+a{
+text-decoration: none;
+color: #613f3f;
+}
+
+a:visited{
+color: #613f3f;
+}
+
+a:hover{
+font-style: italic;
+}
+
+a:active{
+font-style: italic;
+font-weight: bold;
+}
+
+::-webkit-scrollbar{
+width: 6px; 
+}
+    
+::-webkit-scrollbar-track{
+background-color: #578EA3;
+}
+
+::-webkit-scrollbar-thumb{
+background-color: #cdb5b5;
+}
+
+#credit{
+font-size: 12px;
+position: fixed;
+bottom: 70px;
+right: 0;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div id="all">
+
+<div id="side">
+
+</div>
+
+<div id="main">
+
+<h1 id="title">Jinrui wa Suitai Shimashita Heijou Unten Chapter 7<br><br><br>The Fairies' Secret Tool 2<br></h1>
+
+<div id="content">
+
+<!-- ENTRY START -->
+
+<div class="entry">
+<div id="top"></div>
+<div class="text">
+<p>Long, long ago, on a certain planet (Earth), humanity prospered. And then, it declined.</p>
+<p>The rise☆and fall of life♪<sup id="cite_ref-1" class="reference"><a href="#cite_note-1"><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup></p>
+<p id="mwBg">Now ruling Earth in humanity's place are cute little fairies. I'm the person whose job is to act as a mediator between these fairies and humans.</p>
+<p id="mwBg">&nbsp;</p>
+<p id="mwBw">"Oh my, isn't this one of the fairies? Hello there."</p>
+<p id="mwBw">&nbsp;</p>
+<p id="mwCA">One day, deep in the forest, I encountered a fairy. The fairies are a new type of species, measuring at about 10 centimeters tall. They're tiny and adorable, and they love humans. They protect humanity with their incredible magic.</p>
+<p id="mwCA">&nbsp;</p>
+<p id="mwCQ">"This might be sudden, but I have a favor to ask of you, Fairy," I said.</p>
+<p id="mwCg">"What is it?"</p>
+<p id="mwCw">"I'm lost. Please help me."</p>
+<p id="mwDA">"Eh...?"</p>
+<p id="mwDA">&nbsp;</p>
+<p id="mwDQ">Truth be told, I had gotten lost in the forest.</p>
+<p id="mwDQ">&nbsp;</p>
+<p id="mwDg">"Then please take this." The fairy pulled a handy tool&mdash;something only they could create&mdash;from a place that seemed like a fourth-dimensional space. "Here you go&mdash;the Here-and-There Hole!"</p>
+<p id="mwDw">It was a ring big enough for a person to crawl through.</p>
+<p id="mwEA">"The Here-and-There Hole? What kind of tool is that?"</p>
+<p id="mwEQ">"It's a portable wormhole that takes you wherever you want to go."</p>
+<img src="/photos/jintai/JintaiHeijouUntenCH7.png" style="width:875px;height:450px;">
+<p id="mwFg">"How do I use it?"</p>
+<p id="mwFw">"Please take a look at the manual."</p>
+<p id="mwFw">&nbsp;</p>
+<p id="mwGA">I skimmed the little booklet I'd been handed.</p>
+<p id="mwGA">&nbsp;</p>
+<p id="mwGQ">The Here-and-There Hole is a tool that creates a passage through space, allowing you to travel anywhere you want to go. To use it, simply attach it to a vertical surface like a wall and state your destination. The connection is successful when you see the scenery of your destination on the other side of the hole. Travel time is approximately 0 seconds! Enjoy a comfortable modern life.</p>
+<p id="mwGQ">&nbsp;</p>
+<p id="mwGg">It was too convenient. I had no choice but to go through this dream hole. I immediately attached the ring to a nearby tree trunk and stated my destination. My childhood home appeared on the other side of the hole. Just step through here, right? Just as I was about to throw myself in, my eyes caught a sentence printed in extremely fine print at the very end of the manual:</p>
+<p id="mwGg">&nbsp;</p>
+<p id="mwGw"><em>"※This product uses a copying method where only the scanned data of the subject is transferred, which is then completely reproduced upon arriving at the destination. Please note that the original body will be painlessly deleted after scanning."</em></p>
+<p id="mwGw">&nbsp;</p>
+<p id="mwHA">"...Um, doesn't this mean the original just dies?"</p>
+<p id="mwHQ">"Well, an identical copy will live on in your place..."</p>
+<p id="mwHg">"Could you not bring me something like this until you've figured out the ethical problems first?"</p>
+<p id="mwHw">"...You always make things so difficult for us&mdash;"</p>
+<p id="mwHw">&nbsp;</p>
+<p id="mwIA">Humanity, today as always, continues its glorious decline.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><span id="Author.27s_Notes"></span><span id="Author's_Notes" class="mw-headline">Author's Notes</span></h2>
+<div class="mw-references-wrap">
+<ol class="references">
+<li id="cite_note-1">&nbsp;<span class="reference-text">The original line is えーこ☆せーすい♪, which would look like this 「栄枯盛衰」 or 「えいこせいすい」 without the emoticons. The phrase means the "ups and downs of life" or "vicissitudes of fortune".</span></li>
+</ol>
+</div>
+<br>
+<br>
+<p style="margin:0px; text-align: center;">❤</p>
+<br>
+<br>
+<li>♡ <a href="/index.html">Back to the Home Page</a></li>
+
+
+</div>
+
+</div>
+
+<!-- ENTRY END -->
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="credit"><a href="https://repth.neocities.org/index.html">©repth</a></div>
+
+</body>
+
+</html>
